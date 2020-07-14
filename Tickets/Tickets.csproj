@@ -6,11 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.GuardClauses" Version="1.5.0" />
-    <PackageReference Include="Marten" Version="3.12.2" />
-    <PackageReference Include="MediatR" Version="8.0.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.5" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
 </Project>
