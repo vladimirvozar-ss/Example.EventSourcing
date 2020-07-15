@@ -1,0 +1,2 @@
+CREATE EXTENSION IF NOT EXISTS plv8;
+SELECT plv8_version();

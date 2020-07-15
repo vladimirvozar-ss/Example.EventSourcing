@@ -11,7 +11,9 @@ services:
       dockerfile: Tickets.Api/Dockerfile
 
   postgres_image:
-    image: "clkao/postgres-plv8:latest"
+    image: "clkao/postgres-plv8:10-2" 
+    volumes:
+    - ./scripts/install-extensions.sql:/docker-entrypoint-initdb.d/install-extensions.sql
     ports:
       - "5432:5432"
     environment:
