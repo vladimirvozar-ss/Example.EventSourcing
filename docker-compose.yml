@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+
+  tickets.api:
+    image: ${DOCKER_REGISTRY-}ticketsapi
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Tickets.Api/Dockerfile
+
+  postgres_image:
+    image: "clkao/postgres-plv8:latest"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "postgres"
